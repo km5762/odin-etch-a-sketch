@@ -2,3 +2,22 @@
     margin: 0;
     padding: 0;
 }
+
+.gridSquare {
+    flex: 1;
+}
+
+.gridContainer {
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+    height: 32vw;
+    width: 32vw;
+}
+
+.gridRow {
+    display: flex;
+    flex: 1;
+}
