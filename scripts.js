@@ -11,6 +11,7 @@ function initializeGrid(size) {
             const gridSquare = document.createElement('div');
             gridSquare.classList.add('gridSquare');
             gridSquare.addEventListener('mouseover', () => {if (mouseDown == true) gridSquare.setAttribute('style', 'background-color:black')});
+            gridSquare.addEventListener('click', () => {gridSquare.setAttribute('style', 'background-color:black')});
             gridRow.appendChild(gridSquare);
         }
         gridContainer.appendChild(gridRow);
