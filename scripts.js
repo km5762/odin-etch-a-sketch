@@ -1,7 +1,7 @@
 function initializeGrid(size) {
     const gridContainer = document.querySelector('.gridContainer');
     let mouseDown = false;
-    document.addEventListener('mousedown', () => {mouseDown = true;});
+    document.addEventListener('mousedown', (e) => {mouseDown = true; e.preventDefault()});
     document.addEventListener('mouseup', () => {mouseDown = false;});
     for (let i = 0; i < size; i++) {
         const gridRow = document.createElement('div');
