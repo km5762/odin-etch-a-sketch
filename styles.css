@@ -10,6 +10,10 @@
     border-style: none;
 }
 
+.gridSquare:hover {
+    background-color:rgb(200, 200, 200) ;
+}
+
 .gridContainer {
     display: flex;
     flex-direction: column;
