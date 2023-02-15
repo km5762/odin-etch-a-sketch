@@ -45,3 +45,24 @@ html, body {
     font-size: 2.5vw;
     margin-bottom: 4vh;
 }
+
+.ui div {
+    display: flex;
+}
+
+.colorPickerLabel {
+    position: relative;
+    width: 10vw;
+    height: 8vw;
+    background-image: url(http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/5b9cd32a1fca13e.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+  .colorPickerInput {
+    appearance: none;
+    -webkit-appearance: none;
+    opacity: 0;
+  }
+  
