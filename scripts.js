@@ -1,23 +1,42 @@
 let color = 'black';
 const colorPicker = document.getElementById("colorPicker");
 const resetButton = document.getElementById("resetButton");
+const slider = document.getElementById("myRange");
+const inputStatus = document.querySelector(".inputStatus");
+const gridContainer = document.querySelector('.gridContainer');
+let inGrid = false;
 
 colorPicker.addEventListener('input', (e) => {
   color = e.target.value;
+});
+
+slider.addEventListener('change', (e) => {
+    const input = e.target.value
+    gridContainer.innerHTML = '';
+    initializeGrid(input);
+});
+
+slider.addEventListener('input', (e) => {
+    const input = e.target.value
+    inputStatus.textContent = input
 });
 
 resetButton.addEventListener('click', () => {
     const gridSquares = document.querySelectorAll('.gridSquare');
 
     gridSquares.forEach((square) => {
-        square.setAttribute('style', 'background-color:white')
+        square.setAttribute('style', '')
     })
-})
+});
+
+initializeGrid(16);
+
 
 function initializeGrid(size) {
-    const gridContainer = document.querySelector('.gridContainer');
     let mouseDown = false;
-    document.addEventListener('mousedown', (e) => {mouseDown = true; e.preventDefault()});
+    gridContainer.addEventListener('mouseenter', () => {inGrid = true;})
+    gridContainer.addEventListener('mouseleave', () => {inGrid = false;})
+    document.addEventListener('mousedown', (e) => {mouseDown = true; if (inGrid) e.preventDefault()});
     document.addEventListener('mouseup', () => {mouseDown = false;});
     for (let i = 0; i < size; i++) {
         const gridRow = document.createElement('div');

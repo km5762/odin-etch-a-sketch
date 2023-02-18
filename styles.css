@@ -54,12 +54,13 @@ html, body {
     padding-left: 1em;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
 }
+
 
 .colorPickerLabel {
     width: 10vw;
-    height: 8vw;
+    height: 10vw;
     background-image: url(palette.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -77,7 +78,25 @@ html, body {
 }
 
 #resetButton {
-    width: 8vw;
-    height: 8vw;
+    width: 10vw;
+    height: 10vw;
     cursor: pointer;
+}
+
+.slideContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 10vw;
+    margin-left: 1vw;
+}
+
+.slider {
+    width: 8vw;
+}
+
+.slideContainer label {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1vw;
+    margin-left: 2.5vw;
 }
